@@ -1,8 +1,16 @@
-# React + Vite
+# My Todo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**My Todo App** is a task management application built to review and solidify Redux concepts
 
-Currently, two official plugins are available:
+## Features
+- **Add, Update & Remove Tasks:** Perform basic CRUD operations for task management, with actions and reducers managing the Redux state.
+- **Task Completion Status:** Mark tasks as completed or incomplete and filter tasks based on their completion status.
+- **Redux with Thunk Middleware:** Thunk middleware is implemented to check some conditions before changing global states.
+- **Local Storage Persistence:** Tasks are stored in local storage.
+- **Search & Filter Capabilities:** Filter tasks by "All," "Completed," or "Incomplete" and search tasks by title.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used
+
+- **Frontend:** React, CSS
+- **Global state management:** Redux, Redux Thunk for middleware handling
+- **Storage:** Local Storage for task persistence
