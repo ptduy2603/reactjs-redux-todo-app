@@ -1,0 +1,243 @@
+:root {
+  --text-color: #333;
+  --primary-color: #5dadf8;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: inherit;
+  outline: none;
+  border: none;
+}
+
+body {
+  margin: 0;
+  background-color: #282c34;
+  color: #fff;
+  padding: 0;
+  font-size: 1.6rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.app {
+  width: min(800px, 90vw);
+  padding: 16px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  user-select: none;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  color: var(--text-color);
+}
+
+input {
+  font-size: 1.6rem;
+  padding: 10px;
+  border-radius: 20px;
+  flex: 1;
+}
+
+form input:focus {
+  border: 2px solid var(--primary-color);
+}
+
+.search-input {
+  padding: 8px;
+  border-radius: 10px;
+}
+
+form input::placeholder {
+  font-size: 1.4rem;
+  color: #c3c3c3;
+}
+
+form button {
+  width: min(100px, 20%);
+  border-radius: 20px;
+  cursor: pointer;
+  color: #fff;
+  background-color: var(--primary-color);
+  font-weight: 600;
+  border: none;
+}
+
+form button:hover {
+  filter: brightness(0.9);
+}
+
+form button:active {
+  transform: scale(0.9);
+}
+
+.btn {
+  transition: all ease-in 0.1s;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  filter: brightness(0.9);
+}
+
+.btn:active {
+  transform: scale(0.9);
+}
+
+.controls {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.control-left {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.control-left .sort {
+  min-width: 100px;
+  padding: 8px;
+  font-size: 1.4rem;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #333;
+}
+
+.control-left button {
+  color: #fff;
+  background-color: purple;
+  padding: 8px 6px;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+.control-right {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.control-right input {
+  width: 160px;
+  border-radius: 6px;
+  font-size: 1.4rem;
+}
+
+.control-right button {
+  background-color: var(--primary-color);
+  color: #fff;
+  min-width: 40px;
+  padding: 8px;
+}
+
+span {
+  font-size: 1.2rem;
+  display: inline-block;
+  margin-top: 10px;
+  font-style: italic;
+  user-select: none;
+  color: lightblue;
+}
+
+.task-list {
+  padding: 0;
+}
+
+.task-item {
+  list-style-type: none;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  padding: 16px 0;
+}
+
+.task-item + .task-item {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.task-item button {
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.task-content {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 20px;
+}
+
+.task-options {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.task-content h3 {
+  font-weight: 500;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.task-content h3.completed {
+  text-decoration: line-through;
+}
+
+.task-options .btn {
+  min-width: 40px;
+  padding: 6px 8px;
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.task-options .btn:nth-child(1) {
+  background-color: var(--primary-color);
+  pointer-events: none;
+}
+
+.task-options .btn:nth-child(2) {
+  background-color: red;
+}
+
+.task-options .btn:nth-child(3) {
+  background-color: rgb(47, 238, 47);
+}
+
+.task-options .btn:nth-child(3).checked {
+  background-color: yellow;
+}
+
+@media screen and (max-width: 768px) {
+  .control-right {
+    display: none;
+  }
+
+  .controls {
+    justify-content: center;
+  }
+}
